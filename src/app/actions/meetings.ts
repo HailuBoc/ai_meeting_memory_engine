@@ -1,7 +1,6 @@
 'use server'
 
 import { prisma } from '@/lib/prisma'
-import { AIPipelineService } from '@/services/ai-pipeline'
 
 export async function createMeeting(title: string, date: Date, userId: string) {
   try {
@@ -30,6 +29,7 @@ export async function uploadMeetingAudio(
   audioFile: File
 ) {
   try {
+    const { AIPipelineService } = await import('@/services/ai-pipeline')
     const audioBuffer = Buffer.from(await audioFile.arrayBuffer())
     
     const meeting = await prisma.meeting.findUnique({

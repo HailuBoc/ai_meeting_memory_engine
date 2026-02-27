@@ -1,0 +1,61 @@
+{
+  "node": {
+    "40a2c414061e1492b6556e425a322ed4698a6c0b06": {
+      "workers": {
+        "app/dashboard/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CProjects%5C%5CAi_Meeting_Memory_Engine%5C%5Csrc%5C%5Capp%5C%5Cactions%5C%5Cmeetings.ts%22%2C%5B%7B%22id%22%3A%2240a2c414061e1492b6556e425a322ed4698a6c0b06%22%2C%22exportedName%22%3A%22getMeetingDetail%22%7D%2C%7B%22id%22%3A%2240ea435321c1527998450e4384b7182f2958c87fcb%22%2C%22exportedName%22%3A%22getMeetings%22%7D%2C%7B%22id%22%3A%22608d2b4eb1f73011c6da4f08bf90541a75464b2f45%22%2C%22exportedName%22%3A%22uploadMeetingAudio%22%7D%2C%7B%22id%22%3A%2260c88d437241fe5fb5671ecaec23531d31b3570edc%22%2C%22exportedName%22%3A%22updateActionItemStatus%22%7D%2C%7B%22id%22%3A%227062eeccd8fc263459d8a67dd70cb0e896ad37c97e%22%2C%22exportedName%22%3A%22createMeeting%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/dashboard/page": "rsc"
+      }
+    },
+    "40ea435321c1527998450e4384b7182f2958c87fcb": {
+      "workers": {
+        "app/dashboard/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CProjects%5C%5CAi_Meeting_Memory_Engine%5C%5Csrc%5C%5Capp%5C%5Cactions%5C%5Cmeetings.ts%22%2C%5B%7B%22id%22%3A%2240a2c414061e1492b6556e425a322ed4698a6c0b06%22%2C%22exportedName%22%3A%22getMeetingDetail%22%7D%2C%7B%22id%22%3A%2240ea435321c1527998450e4384b7182f2958c87fcb%22%2C%22exportedName%22%3A%22getMeetings%22%7D%2C%7B%22id%22%3A%22608d2b4eb1f73011c6da4f08bf90541a75464b2f45%22%2C%22exportedName%22%3A%22uploadMeetingAudio%22%7D%2C%7B%22id%22%3A%2260c88d437241fe5fb5671ecaec23531d31b3570edc%22%2C%22exportedName%22%3A%22updateActionItemStatus%22%7D%2C%7B%22id%22%3A%227062eeccd8fc263459d8a67dd70cb0e896ad37c97e%22%2C%22exportedName%22%3A%22createMeeting%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/dashboard/page": "rsc"
+      }
+    },
+    "608d2b4eb1f73011c6da4f08bf90541a75464b2f45": {
+      "workers": {
+        "app/dashboard/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CProjects%5C%5CAi_Meeting_Memory_Engine%5C%5Csrc%5C%5Capp%5C%5Cactions%5C%5Cmeetings.ts%22%2C%5B%7B%22id%22%3A%2240a2c414061e1492b6556e425a322ed4698a6c0b06%22%2C%22exportedName%22%3A%22getMeetingDetail%22%7D%2C%7B%22id%22%3A%2240ea435321c1527998450e4384b7182f2958c87fcb%22%2C%22exportedName%22%3A%22getMeetings%22%7D%2C%7B%22id%22%3A%22608d2b4eb1f73011c6da4f08bf90541a75464b2f45%22%2C%22exportedName%22%3A%22uploadMeetingAudio%22%7D%2C%7B%22id%22%3A%2260c88d437241fe5fb5671ecaec23531d31b3570edc%22%2C%22exportedName%22%3A%22updateActionItemStatus%22%7D%2C%7B%22id%22%3A%227062eeccd8fc263459d8a67dd70cb0e896ad37c97e%22%2C%22exportedName%22%3A%22createMeeting%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/dashboard/page": "rsc"
+      }
+    },
+    "60c88d437241fe5fb5671ecaec23531d31b3570edc": {
+      "workers": {
+        "app/dashboard/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CProjects%5C%5CAi_Meeting_Memory_Engine%5C%5Csrc%5C%5Capp%5C%5Cactions%5C%5Cmeetings.ts%22%2C%5B%7B%22id%22%3A%2240a2c414061e1492b6556e425a322ed4698a6c0b06%22%2C%22exportedName%22%3A%22getMeetingDetail%22%7D%2C%7B%22id%22%3A%2240ea435321c1527998450e4384b7182f2958c87fcb%22%2C%22exportedName%22%3A%22getMeetings%22%7D%2C%7B%22id%22%3A%22608d2b4eb1f73011c6da4f08bf90541a75464b2f45%22%2C%22exportedName%22%3A%22uploadMeetingAudio%22%7D%2C%7B%22id%22%3A%2260c88d437241fe5fb5671ecaec23531d31b3570edc%22%2C%22exportedName%22%3A%22updateActionItemStatus%22%7D%2C%7B%22id%22%3A%227062eeccd8fc263459d8a67dd70cb0e896ad37c97e%22%2C%22exportedName%22%3A%22createMeeting%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/dashboard/page": "rsc"
+      }
+    },
+    "7062eeccd8fc263459d8a67dd70cb0e896ad37c97e": {
+      "workers": {
+        "app/dashboard/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CProjects%5C%5CAi_Meeting_Memory_Engine%5C%5Csrc%5C%5Capp%5C%5Cactions%5C%5Cmeetings.ts%22%2C%5B%7B%22id%22%3A%2240a2c414061e1492b6556e425a322ed4698a6c0b06%22%2C%22exportedName%22%3A%22getMeetingDetail%22%7D%2C%7B%22id%22%3A%2240ea435321c1527998450e4384b7182f2958c87fcb%22%2C%22exportedName%22%3A%22getMeetings%22%7D%2C%7B%22id%22%3A%22608d2b4eb1f73011c6da4f08bf90541a75464b2f45%22%2C%22exportedName%22%3A%22uploadMeetingAudio%22%7D%2C%7B%22id%22%3A%2260c88d437241fe5fb5671ecaec23531d31b3570edc%22%2C%22exportedName%22%3A%22updateActionItemStatus%22%7D%2C%7B%22id%22%3A%227062eeccd8fc263459d8a67dd70cb0e896ad37c97e%22%2C%22exportedName%22%3A%22createMeeting%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/dashboard/page": "rsc"
+      }
+    }
+  },
+  "edge": {},
+  "encryptionKey": "C+ToFmR/41IJ2AJkr0eIrqqlC6YwmxNoVYFHIbR/IBg="
+}

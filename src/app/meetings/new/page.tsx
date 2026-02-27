@@ -68,7 +68,7 @@ export default function NewMeetingPage() {
   }
 
   return (
-    <div className="container mx-auto p-6 max-w-2xl">
+    <div className="container mx-auto max-w-2xl px-4 py-6 sm:px-6 sm:py-8">
       <div className="mb-6">
         <Button asChild variant="ghost" className="mb-4">
           <Link href="/dashboard">
@@ -76,12 +76,12 @@ export default function NewMeetingPage() {
             Back to Dashboard
           </Link>
         </Button>
-        <h1 className="text-3xl font-bold">New Meeting</h1>
+        <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">New Meeting</h1>
         <p className="text-muted-foreground">Create a new meeting and upload audio for AI processing</p>
       </div>
 
       {/* Step 1: Create Meeting */}
-      <Card className="mb-6">
+      <Card className="mb-6 transition-shadow duration-200 hover:shadow-md">
         <CardHeader>
           <CardTitle className="flex items-center">
             <Calendar className="h-5 w-5 mr-2" />
@@ -125,7 +125,7 @@ export default function NewMeetingPage() {
 
       {/* Step 2: Upload Audio */}
       {meetingId && (
-        <Card>
+        <Card className="animate-slide-up transition-shadow duration-200 hover:shadow-md">
           <CardHeader>
             <CardTitle className="flex items-center">
               <Upload className="h-5 w-5 mr-2" />

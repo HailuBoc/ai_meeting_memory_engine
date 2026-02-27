@@ -7,15 +7,16 @@ import Link from 'next/link'
 import { UpdateActionItemForm } from '@/components/update-action-item-form'
 
 interface MeetingDetailPageProps {
-  params: { id: string }
+  params: Promise<{ id: string }>
 }
 
 export default async function MeetingDetailPage({ params }: MeetingDetailPageProps) {
-  const { success, meeting, error } = await getMeetingDetail(params.id)
+  const routeParams = await params
+  const { success, meeting, error } = await getMeetingDetail(routeParams.id)
 
   if (!success || error || !meeting) {
-    return (
-      <div className="container mx-auto p-6">
+  return (
+    <div className="container mx-auto px-4 py-6 sm:px-6 sm:py-8">
         <div className="text-center">
           <h1 className="text-3xl font-bold mb-4">Meeting Not Found</h1>
           <p className="text-muted-foreground mb-4">{error}</p>
@@ -28,7 +29,7 @@ export default async function MeetingDetailPage({ params }: MeetingDetailPagePro
   }
 
   return (
-    <div className="container mx-auto p-6">
+    <div className="container mx-auto px-4 py-6 sm:px-6 sm:py-8">
       <div className="mb-6">
         <Button asChild variant="ghost" className="mb-4">
           <Link href="/dashboard">
@@ -36,9 +37,9 @@ export default async function MeetingDetailPage({ params }: MeetingDetailPagePro
             Back to Dashboard
           </Link>
         </Button>
-        <div className="flex justify-between items-start">
-          <div>
-            <h1 className="text-3xl font-bold mb-2">{meeting.title}</h1>
+        <div className="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-start">
+          <div className="min-w-0">
+            <h1 className="mb-2 text-2xl font-bold tracking-tight sm:text-3xl">{meeting.title}</h1>
             <div className="flex items-center space-x-4 text-sm text-muted-foreground">
               <div className="flex items-center">
                 <Calendar className="h-4 w-4 mr-1" />
@@ -55,7 +56,7 @@ export default async function MeetingDetailPage({ params }: MeetingDetailPagePro
 
       {/* Meeting Summary */}
       {meeting.summary && (
-        <Card className="mb-6">
+        <Card className="mb-6 transition-shadow duration-200 hover:shadow-md">
           <CardHeader>
             <CardTitle className="flex items-center">
               <FileText className="h-5 w-5 mr-2" />
@@ -68,9 +69,9 @@ export default async function MeetingDetailPage({ params }: MeetingDetailPagePro
         </Card>
       )}
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         {/* Transcript */}
-        <Card>
+        <Card className="transition-shadow duration-200 hover:shadow-md">
           <CardHeader>
             <CardTitle className="flex items-center">
               <FileText className="h-5 w-5 mr-2" />
@@ -83,7 +84,7 @@ export default async function MeetingDetailPage({ params }: MeetingDetailPagePro
           <CardContent>
             {meeting.rawTranscript ? (
               <div className="prose prose-sm max-w-none">
-                <div className="bg-gray-50 p-4 rounded-lg max-h-96 overflow-y-auto">
+                <div className="max-h-96 overflow-y-auto rounded-lg bg-muted/50 p-4 scrollbar-thin">
                   <p className="whitespace-pre-wrap text-sm leading-relaxed">
                     {meeting.rawTranscript}
                   </p>
@@ -100,7 +101,7 @@ export default async function MeetingDetailPage({ params }: MeetingDetailPagePro
         {/* Decisions and Action Items */}
         <div className="space-y-6">
           {/* Decisions */}
-          <Card>
+          <Card className="transition-shadow duration-200 hover:shadow-md">
             <CardHeader>
               <CardTitle className="flex items-center">
                 <CheckCircle className="h-5 w-5 mr-2" />
@@ -135,7 +136,7 @@ export default async function MeetingDetailPage({ params }: MeetingDetailPagePro
           </Card>
 
           {/* Action Items */}
-          <Card>
+          <Card className="transition-shadow duration-200 hover:shadow-md">
             <CardHeader>
               <CardTitle className="flex items-center">
                 <Clock className="h-5 w-5 mr-2" />
@@ -153,8 +154,8 @@ export default async function MeetingDetailPage({ params }: MeetingDetailPagePro
               ) : (
                 <div className="space-y-3">
                   {meeting.actionItems.map((item) => (
-                    <div key={item.id} className="border rounded-lg p-3">
-                      <div className="flex items-start justify-between">
+                    <div key={item.id} className="rounded-lg border p-3 transition-colors hover:bg-muted/50">
+                      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                         <div className="flex-1">
                           <p className="font-medium text-gray-900">{item.task}</p>
                           {item.assignee && (

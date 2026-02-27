@@ -1,4 +1,4 @@
-import openai from '@/lib/openai'
+import { getOpenAIClient } from '@/lib/openai'
 import { prisma } from '@/lib/prisma'
 
 interface ExtractedDecision {
@@ -18,8 +18,11 @@ interface AIExtractionResult {
 
 export class AIPipelineService {
   static async transcribeAudio(audioBuffer: Buffer): Promise<string> {
+    const openai = getOpenAIClient()
+    const audioBytes = new Uint8Array(audioBuffer)
+
     const transcription = await openai.audio.transcriptions.create({
-      file: new File([audioBuffer], 'audio.mp3', { type: 'audio/mpeg' }),
+      file: new File([audioBytes], 'audio.mp3', { type: 'audio/mpeg' }),
       model: 'whisper-1',
     })
     
@@ -27,6 +30,7 @@ export class AIPipelineService {
   }
 
   static async extractDecisionsAndActions(transcript: string): Promise<AIExtractionResult> {
+    const openai = getOpenAIClient()
     const prompt = `
     Analyze the following meeting transcript and extract:
     1. Decisions made (immutable decisions that were finalized)
@@ -72,6 +76,7 @@ export class AIPipelineService {
   }
 
   static async generateEmbeddings(text: string): Promise<number[]> {
+    const openai = getOpenAIClient()
     const response = await openai.embeddings.create({
       model: 'text-embedding-3-small',
       input: text,
@@ -99,6 +104,8 @@ export class AIPipelineService {
     date: Date
   ): Promise<void> {
     try {
+      const openai = getOpenAIClient()
+
       // Step 1: Transcribe audio
       const transcript = await this.transcribeAudio(audioBuffer)
       

@@ -54,7 +54,7 @@ export function UpdateActionItemForm({ actionItemId, currentStatus }: UpdateActi
   }
 
   return (
-    <div className="flex items-center space-x-2">
+    <div className="flex flex-col items-stretch gap-2 sm:flex-row sm:items-center sm:space-x-2 sm:gap-0">
       <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getStatusColor(status)}`}>
         {getStatusText(status)}
       </span>

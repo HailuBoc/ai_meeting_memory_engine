@@ -53,10 +53,10 @@ export default function SearchPage() {
     searchResults.decisions
 
   return (
-    <div className="container mx-auto p-6 max-w-4xl">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">Global Search</h1>
-        <p className="text-muted-foreground">
+    <div className="container mx-auto max-w-4xl px-4 py-6 sm:px-6 sm:py-8">
+      <div className="mb-6 sm:mb-8">
+        <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">Global Search</h1>
+        <p className="mt-2 text-muted-foreground">
           Search across all meeting transcripts and decisions using AI-powered semantic search
         </p>
       </div>
@@ -64,8 +64,8 @@ export default function SearchPage() {
       {/* Search Form */}
       <Card className="mb-6">
         <CardContent className="pt-6">
-          <form onSubmit={handleSearch} className="flex space-x-4">
-            <div className="flex-1">
+          <form onSubmit={handleSearch} className="flex flex-col gap-4 sm:flex-row sm:gap-4">
+            <div className="flex-1 min-w-0">
               <Input
                 type="text"
                 placeholder="Ask anything about your meetings... (e.g., 'Why did we decide to use Postgres?')"
@@ -74,7 +74,7 @@ export default function SearchPage() {
                 className="text-base"
               />
             </div>
-            <Button type="submit" disabled={isSearching || !query.trim()}>
+            <Button type="submit" disabled={isSearching || !query.trim()} className="w-full sm:w-auto shrink-0">
               <Search className="h-4 w-4 mr-2" />
               {isSearching ? 'Searching...' : 'Search'}
             </Button>
@@ -86,7 +86,7 @@ export default function SearchPage() {
       {searchResults.meetings.length > 0 || searchResults.decisions.length > 0 ? (
         <>
           {/* Tabs */}
-          <div className="flex space-x-1 mb-6 bg-gray-100 p-1 rounded-lg">
+          <div className="mb-6 flex flex-wrap gap-1 rounded-lg bg-muted p-1 sm:flex-nowrap sm:space-x-1">
             <Button
               variant={activeTab === 'all' ? 'default' : 'ghost'}
               size="sm"
@@ -113,9 +113,9 @@ export default function SearchPage() {
           {/* Results List */}
           <div className="space-y-4">
             {displayResults.map((result, index) => (
-              <Card key={`${result.type}-${result.meetingId}-${index}`}>
+              <Card key={`${result.type}-${result.meetingId}-${index}`} className="transition-all duration-200 hover:border-primary/30">
                 <CardContent className="pt-6">
-                  <div className="flex items-start justify-between">
+                  <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                     <div className="flex-1">
                       <div className="flex items-center space-x-2 mb-2">
                         {result.type === 'decision' ? (
@@ -145,7 +145,7 @@ export default function SearchPage() {
                       </div>
                     </div>
                     
-                    <Button asChild variant="outline" size="sm">
+                    <Button asChild variant="outline" size="sm" className="shrink-0 w-fit">
                       <Link href={`/meetings/${result.meetingId}`}>
                         <ExternalLink className="h-4 w-4 mr-1" />
                         View
