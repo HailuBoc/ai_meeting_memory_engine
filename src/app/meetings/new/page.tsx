@@ -7,17 +7,33 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { Upload, Calendar, ArrowLeft } from 'lucide-react'
+import { Upload, Calendar, ArrowLeft, CheckCircle, AlertCircle, X } from 'lucide-react'
 import Link from 'next/link'
+
+type Message = {
+  type: 'success' | 'error'
+  text: string
+} | null
 
 export default function NewMeetingPage() {
   const [isLoading, setIsLoading] = useState(false)
   const [meetingId, setMeetingId] = useState<string | null>(null)
   const [uploadStatus, setUploadStatus] = useState<'idle' | 'uploading' | 'processing' | 'completed' | 'error'>('idle')
+  const [message, setMessage] = useState<Message>(null)
   const router = useRouter()
+
+  const showMessage = (type: 'success' | 'error', text: string) => {
+    setMessage({ type, text })
+    if (type === 'success') {
+      setTimeout(() => setMessage(null), 5000)
+    }
+  }
+
+  const dismissMessage = () => setMessage(null)
 
   const handleCreateMeeting = async (formData: FormData) => {
     setIsLoading(true)
+    setMessage(null)
     try {
       const title = formData.get('title') as string
       const date = new Date(formData.get('date') as string)
@@ -27,11 +43,12 @@ export default function NewMeetingPage() {
       
       if (result.success && result.meeting) {
         setMeetingId(result.meeting.id)
+        showMessage('success', 'Meeting created successfully! Now upload the audio file.')
       } else {
-        alert('Failed to create meeting: ' + result.error)
+        showMessage('error', 'Failed to create meeting: ' + (result.error || 'Unknown error'))
       }
     } catch (error) {
-      alert('Error creating meeting')
+      showMessage('error', 'Error creating meeting. Please check your connection and try again.')
     } finally {
       setIsLoading(false)
     }
@@ -41,11 +58,13 @@ export default function NewMeetingPage() {
     if (!meetingId) return
 
     setUploadStatus('uploading')
+    setMessage(null)
     try {
       const audioFile = formData.get('audio') as File
       
-      if (!audioFile) {
-        alert('Please select an audio file')
+      if (!audioFile || audioFile.size === 0) {
+        showMessage('error', 'Please select an audio file')
+        setUploadStatus('idle')
         return
       }
 
@@ -54,21 +73,22 @@ export default function NewMeetingPage() {
       
       if (result.success) {
         setUploadStatus('completed')
+        showMessage('success', 'Audio processed successfully! Redirecting...')
         setTimeout(() => {
           router.push(`/meetings/${meetingId}`)
         }, 2000)
       } else {
         setUploadStatus('error')
-        alert('Failed to process audio: ' + result.error)
+        showMessage('error', 'Failed to process audio: ' + (result.error || 'Unknown error'))
       }
     } catch (error) {
       setUploadStatus('error')
-      alert('Error uploading audio')
+      showMessage('error', 'Error uploading audio. Please try again.')
     }
   }
 
   return (
-    <div className="container mx-auto p-6 max-w-2xl">
+    <div className="container mx-auto max-w-2xl px-4 py-6 sm:px-6 sm:py-8">
       <div className="mb-6">
         <Button asChild variant="ghost" className="mb-4">
           <Link href="/dashboard">
@@ -76,12 +96,39 @@ export default function NewMeetingPage() {
             Back to Dashboard
           </Link>
         </Button>
-        <h1 className="text-3xl font-bold">New Meeting</h1>
+        <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">New Meeting</h1>
         <p className="text-muted-foreground">Create a new meeting and upload audio for AI processing</p>
       </div>
 
+      {/* Message Banner */}
+      {message && (
+        <div
+          className={`mb-6 flex items-center justify-between gap-3 rounded-lg border p-4 transition-all animate-slide-up ${
+            message.type === 'success'
+              ? 'border-green-200 bg-green-50 text-green-800'
+              : 'border-red-200 bg-red-50 text-red-800'
+          }`}
+        >
+          <div className="flex items-center gap-3">
+            {message.type === 'success' ? (
+              <CheckCircle className="h-5 w-5 shrink-0 text-green-600" />
+            ) : (
+              <AlertCircle className="h-5 w-5 shrink-0 text-red-600" />
+            )}
+            <p className="text-sm font-medium">{message.text}</p>
+          </div>
+          <button
+            onClick={dismissMessage}
+            className="shrink-0 rounded-md p-1 transition-colors hover:bg-black/10"
+            aria-label="Dismiss message"
+          >
+            <X className="h-4 w-4" />
+          </button>
+        </div>
+      )}
+
       {/* Step 1: Create Meeting */}
-      <Card className="mb-6">
+      <Card className="mb-6 transition-shadow duration-200 hover:shadow-md">
         <CardHeader>
           <CardTitle className="flex items-center">
             <Calendar className="h-5 w-5 mr-2" />
@@ -125,7 +172,7 @@ export default function NewMeetingPage() {
 
       {/* Step 2: Upload Audio */}
       {meetingId && (
-        <Card>
+        <Card className="animate-slide-up transition-shadow duration-200 hover:shadow-md">
           <CardHeader>
             <CardTitle className="flex items-center">
               <Upload className="h-5 w-5 mr-2" />
