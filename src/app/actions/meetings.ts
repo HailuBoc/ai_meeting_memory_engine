@@ -4,6 +4,17 @@ import { prisma } from '@/lib/prisma'
 
 export async function createMeeting(title: string, date: Date, userId: string) {
   try {
+    // Ensure the user exists (create if not)
+    await prisma.user.upsert({
+      where: { id: userId },
+      update: {},
+      create: {
+        id: userId,
+        email: `${userId}@demo.local`,
+        name: userId === 'demo-user' ? 'Demo User' : userId,
+      },
+    })
+
     const meeting = await prisma.meeting.create({
       data: {
         title,

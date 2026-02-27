@@ -29,13 +29,31 @@ export default async function DashboardPage({
 
   if (!success || error) {
     return (
-      <div className="container mx-auto p-6">
-        <div className="text-center">
-          <h1 className="text-3xl font-bold mb-4">Dashboard</h1>
-          <p className="text-muted-foreground">
-            Error loading meetings: {error}
-          </p>
+      <div className="container mx-auto px-4 py-6 sm:px-6 sm:py-8">
+        <div className="mb-8">
+          <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">MEMOFLOW Dashboard</h1>
+          <p className="mt-1 text-muted-foreground">Track decisions and action items across all meetings</p>
         </div>
+        
+        <Card className="border-red-200 bg-red-50">
+          <CardContent className="flex flex-col items-center gap-4 py-8 text-center">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-red-100">
+              <AlertCircle className="h-6 w-6 text-red-600" />
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-red-800">Unable to Load Meetings</h3>
+              <p className="mt-1 text-sm text-red-700">
+                {error || 'An unexpected error occurred'}
+              </p>
+              <p className="mt-3 text-xs text-red-600">
+                This might be a temporary issue. Please check your internet connection or try again later.
+              </p>
+            </div>
+            <Button asChild variant="outline" className="mt-2 border-red-300 text-red-700 hover:bg-red-100">
+              <Link href="/dashboard">Try Again</Link>
+            </Button>
+          </CardContent>
+        </Card>
       </div>
     );
   }
@@ -75,7 +93,7 @@ export default async function DashboardPage({
       <div className="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center">
         <div>
           <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
-            Meeting Memory Dashboard
+            MEMOFLOW Dashboard
           </h1>
           <p className="mt-1 text-muted-foreground">
             Track decisions and action items across all meetings
@@ -85,7 +103,6 @@ export default async function DashboardPage({
           <Link href="/meetings/new">New Meeting</Link>
         </Button>
       </div>
-
       {/* Stats Overview */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6">
         <Card className="transition-transform duration-200 hover:-translate-y-0.5">

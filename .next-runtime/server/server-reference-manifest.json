@@ -1,61 +1,111 @@
 {
   "node": {
-    "40a2c414061e1492b6556e425a322ed4698a6c0b06": {
+    "4060ea7277e2e628279628aeea6ae4ef4c89e3709e": {
       "workers": {
         "app/dashboard/page": {
-          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CProjects%5C%5CAi_Meeting_Memory_Engine%5C%5Csrc%5C%5Capp%5C%5Cactions%5C%5Cmeetings.ts%22%2C%5B%7B%22id%22%3A%2240a2c414061e1492b6556e425a322ed4698a6c0b06%22%2C%22exportedName%22%3A%22getMeetingDetail%22%7D%2C%7B%22id%22%3A%2240ea435321c1527998450e4384b7182f2958c87fcb%22%2C%22exportedName%22%3A%22getMeetings%22%7D%2C%7B%22id%22%3A%22608d2b4eb1f73011c6da4f08bf90541a75464b2f45%22%2C%22exportedName%22%3A%22uploadMeetingAudio%22%7D%2C%7B%22id%22%3A%2260c88d437241fe5fb5671ecaec23531d31b3570edc%22%2C%22exportedName%22%3A%22updateActionItemStatus%22%7D%2C%7B%22id%22%3A%227062eeccd8fc263459d8a67dd70cb0e896ad37c97e%22%2C%22exportedName%22%3A%22createMeeting%22%7D%5D%5D%5D&__client_imported__=!",
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CProjects%5C%5CAi_Meeting_Memory_Engine%5C%5Csrc%5C%5Capp%5C%5Cactions%5C%5Cmeetings.ts%22%2C%5B%7B%22id%22%3A%224060ea7277e2e628279628aeea6ae4ef4c89e3709e%22%2C%22exportedName%22%3A%22getMeetings%22%7D%2C%7B%22id%22%3A%22409b7728ea445916a9f52fd57d840ca1984f8e77c8%22%2C%22exportedName%22%3A%22getMeetingDetail%22%7D%2C%7B%22id%22%3A%22605fc81d98b048f35ab1b86225b96d7605df9c83b8%22%2C%22exportedName%22%3A%22updateActionItemStatus%22%7D%2C%7B%22id%22%3A%2260dd95034bdec28d5e0102f03c369fd17bad194ef3%22%2C%22exportedName%22%3A%22uploadMeetingAudio%22%7D%2C%7B%22id%22%3A%22708efad985b74802522e7ee58ed301aa89cb11de73%22%2C%22exportedName%22%3A%22createMeeting%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/meetings/new/page": {
+          "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CProjects%5C%5CAi_Meeting_Memory_Engine%5C%5Csrc%5C%5Capp%5C%5Cactions%5C%5Cmeetings.ts%22%2C%5B%7B%22id%22%3A%224060ea7277e2e628279628aeea6ae4ef4c89e3709e%22%2C%22exportedName%22%3A%22getMeetings%22%7D%2C%7B%22id%22%3A%22409b7728ea445916a9f52fd57d840ca1984f8e77c8%22%2C%22exportedName%22%3A%22getMeetingDetail%22%7D%2C%7B%22id%22%3A%22605fc81d98b048f35ab1b86225b96d7605df9c83b8%22%2C%22exportedName%22%3A%22updateActionItemStatus%22%7D%2C%7B%22id%22%3A%2260dd95034bdec28d5e0102f03c369fd17bad194ef3%22%2C%22exportedName%22%3A%22uploadMeetingAudio%22%7D%2C%7B%22id%22%3A%22708efad985b74802522e7ee58ed301aa89cb11de73%22%2C%22exportedName%22%3A%22createMeeting%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        },
+        "app/meetings/[id]/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CProjects%5C%5CAi_Meeting_Memory_Engine%5C%5Csrc%5C%5Capp%5C%5Cactions%5C%5Cmeetings.ts%22%2C%5B%7B%22id%22%3A%224060ea7277e2e628279628aeea6ae4ef4c89e3709e%22%2C%22exportedName%22%3A%22getMeetings%22%7D%2C%7B%22id%22%3A%22409b7728ea445916a9f52fd57d840ca1984f8e77c8%22%2C%22exportedName%22%3A%22getMeetingDetail%22%7D%2C%7B%22id%22%3A%22605fc81d98b048f35ab1b86225b96d7605df9c83b8%22%2C%22exportedName%22%3A%22updateActionItemStatus%22%7D%2C%7B%22id%22%3A%2260dd95034bdec28d5e0102f03c369fd17bad194ef3%22%2C%22exportedName%22%3A%22uploadMeetingAudio%22%7D%2C%7B%22id%22%3A%22708efad985b74802522e7ee58ed301aa89cb11de73%22%2C%22exportedName%22%3A%22createMeeting%22%7D%5D%5D%5D&__client_imported__=!",
           "async": false
         }
       },
       "layer": {
-        "app/dashboard/page": "rsc"
+        "app/dashboard/page": "rsc",
+        "app/meetings/new/page": "action-browser",
+        "app/meetings/[id]/page": "rsc"
       }
     },
-    "40ea435321c1527998450e4384b7182f2958c87fcb": {
+    "409b7728ea445916a9f52fd57d840ca1984f8e77c8": {
       "workers": {
         "app/dashboard/page": {
-          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CProjects%5C%5CAi_Meeting_Memory_Engine%5C%5Csrc%5C%5Capp%5C%5Cactions%5C%5Cmeetings.ts%22%2C%5B%7B%22id%22%3A%2240a2c414061e1492b6556e425a322ed4698a6c0b06%22%2C%22exportedName%22%3A%22getMeetingDetail%22%7D%2C%7B%22id%22%3A%2240ea435321c1527998450e4384b7182f2958c87fcb%22%2C%22exportedName%22%3A%22getMeetings%22%7D%2C%7B%22id%22%3A%22608d2b4eb1f73011c6da4f08bf90541a75464b2f45%22%2C%22exportedName%22%3A%22uploadMeetingAudio%22%7D%2C%7B%22id%22%3A%2260c88d437241fe5fb5671ecaec23531d31b3570edc%22%2C%22exportedName%22%3A%22updateActionItemStatus%22%7D%2C%7B%22id%22%3A%227062eeccd8fc263459d8a67dd70cb0e896ad37c97e%22%2C%22exportedName%22%3A%22createMeeting%22%7D%5D%5D%5D&__client_imported__=!",
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CProjects%5C%5CAi_Meeting_Memory_Engine%5C%5Csrc%5C%5Capp%5C%5Cactions%5C%5Cmeetings.ts%22%2C%5B%7B%22id%22%3A%224060ea7277e2e628279628aeea6ae4ef4c89e3709e%22%2C%22exportedName%22%3A%22getMeetings%22%7D%2C%7B%22id%22%3A%22409b7728ea445916a9f52fd57d840ca1984f8e77c8%22%2C%22exportedName%22%3A%22getMeetingDetail%22%7D%2C%7B%22id%22%3A%22605fc81d98b048f35ab1b86225b96d7605df9c83b8%22%2C%22exportedName%22%3A%22updateActionItemStatus%22%7D%2C%7B%22id%22%3A%2260dd95034bdec28d5e0102f03c369fd17bad194ef3%22%2C%22exportedName%22%3A%22uploadMeetingAudio%22%7D%2C%7B%22id%22%3A%22708efad985b74802522e7ee58ed301aa89cb11de73%22%2C%22exportedName%22%3A%22createMeeting%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/meetings/new/page": {
+          "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CProjects%5C%5CAi_Meeting_Memory_Engine%5C%5Csrc%5C%5Capp%5C%5Cactions%5C%5Cmeetings.ts%22%2C%5B%7B%22id%22%3A%224060ea7277e2e628279628aeea6ae4ef4c89e3709e%22%2C%22exportedName%22%3A%22getMeetings%22%7D%2C%7B%22id%22%3A%22409b7728ea445916a9f52fd57d840ca1984f8e77c8%22%2C%22exportedName%22%3A%22getMeetingDetail%22%7D%2C%7B%22id%22%3A%22605fc81d98b048f35ab1b86225b96d7605df9c83b8%22%2C%22exportedName%22%3A%22updateActionItemStatus%22%7D%2C%7B%22id%22%3A%2260dd95034bdec28d5e0102f03c369fd17bad194ef3%22%2C%22exportedName%22%3A%22uploadMeetingAudio%22%7D%2C%7B%22id%22%3A%22708efad985b74802522e7ee58ed301aa89cb11de73%22%2C%22exportedName%22%3A%22createMeeting%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        },
+        "app/meetings/[id]/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CProjects%5C%5CAi_Meeting_Memory_Engine%5C%5Csrc%5C%5Capp%5C%5Cactions%5C%5Cmeetings.ts%22%2C%5B%7B%22id%22%3A%224060ea7277e2e628279628aeea6ae4ef4c89e3709e%22%2C%22exportedName%22%3A%22getMeetings%22%7D%2C%7B%22id%22%3A%22409b7728ea445916a9f52fd57d840ca1984f8e77c8%22%2C%22exportedName%22%3A%22getMeetingDetail%22%7D%2C%7B%22id%22%3A%22605fc81d98b048f35ab1b86225b96d7605df9c83b8%22%2C%22exportedName%22%3A%22updateActionItemStatus%22%7D%2C%7B%22id%22%3A%2260dd95034bdec28d5e0102f03c369fd17bad194ef3%22%2C%22exportedName%22%3A%22uploadMeetingAudio%22%7D%2C%7B%22id%22%3A%22708efad985b74802522e7ee58ed301aa89cb11de73%22%2C%22exportedName%22%3A%22createMeeting%22%7D%5D%5D%5D&__client_imported__=!",
           "async": false
         }
       },
       "layer": {
-        "app/dashboard/page": "rsc"
+        "app/dashboard/page": "rsc",
+        "app/meetings/new/page": "action-browser",
+        "app/meetings/[id]/page": "rsc"
       }
     },
-    "608d2b4eb1f73011c6da4f08bf90541a75464b2f45": {
+    "605fc81d98b048f35ab1b86225b96d7605df9c83b8": {
       "workers": {
         "app/dashboard/page": {
-          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CProjects%5C%5CAi_Meeting_Memory_Engine%5C%5Csrc%5C%5Capp%5C%5Cactions%5C%5Cmeetings.ts%22%2C%5B%7B%22id%22%3A%2240a2c414061e1492b6556e425a322ed4698a6c0b06%22%2C%22exportedName%22%3A%22getMeetingDetail%22%7D%2C%7B%22id%22%3A%2240ea435321c1527998450e4384b7182f2958c87fcb%22%2C%22exportedName%22%3A%22getMeetings%22%7D%2C%7B%22id%22%3A%22608d2b4eb1f73011c6da4f08bf90541a75464b2f45%22%2C%22exportedName%22%3A%22uploadMeetingAudio%22%7D%2C%7B%22id%22%3A%2260c88d437241fe5fb5671ecaec23531d31b3570edc%22%2C%22exportedName%22%3A%22updateActionItemStatus%22%7D%2C%7B%22id%22%3A%227062eeccd8fc263459d8a67dd70cb0e896ad37c97e%22%2C%22exportedName%22%3A%22createMeeting%22%7D%5D%5D%5D&__client_imported__=!",
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CProjects%5C%5CAi_Meeting_Memory_Engine%5C%5Csrc%5C%5Capp%5C%5Cactions%5C%5Cmeetings.ts%22%2C%5B%7B%22id%22%3A%224060ea7277e2e628279628aeea6ae4ef4c89e3709e%22%2C%22exportedName%22%3A%22getMeetings%22%7D%2C%7B%22id%22%3A%22409b7728ea445916a9f52fd57d840ca1984f8e77c8%22%2C%22exportedName%22%3A%22getMeetingDetail%22%7D%2C%7B%22id%22%3A%22605fc81d98b048f35ab1b86225b96d7605df9c83b8%22%2C%22exportedName%22%3A%22updateActionItemStatus%22%7D%2C%7B%22id%22%3A%2260dd95034bdec28d5e0102f03c369fd17bad194ef3%22%2C%22exportedName%22%3A%22uploadMeetingAudio%22%7D%2C%7B%22id%22%3A%22708efad985b74802522e7ee58ed301aa89cb11de73%22%2C%22exportedName%22%3A%22createMeeting%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/meetings/new/page": {
+          "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CProjects%5C%5CAi_Meeting_Memory_Engine%5C%5Csrc%5C%5Capp%5C%5Cactions%5C%5Cmeetings.ts%22%2C%5B%7B%22id%22%3A%224060ea7277e2e628279628aeea6ae4ef4c89e3709e%22%2C%22exportedName%22%3A%22getMeetings%22%7D%2C%7B%22id%22%3A%22409b7728ea445916a9f52fd57d840ca1984f8e77c8%22%2C%22exportedName%22%3A%22getMeetingDetail%22%7D%2C%7B%22id%22%3A%22605fc81d98b048f35ab1b86225b96d7605df9c83b8%22%2C%22exportedName%22%3A%22updateActionItemStatus%22%7D%2C%7B%22id%22%3A%2260dd95034bdec28d5e0102f03c369fd17bad194ef3%22%2C%22exportedName%22%3A%22uploadMeetingAudio%22%7D%2C%7B%22id%22%3A%22708efad985b74802522e7ee58ed301aa89cb11de73%22%2C%22exportedName%22%3A%22createMeeting%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        },
+        "app/meetings/[id]/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CProjects%5C%5CAi_Meeting_Memory_Engine%5C%5Csrc%5C%5Capp%5C%5Cactions%5C%5Cmeetings.ts%22%2C%5B%7B%22id%22%3A%224060ea7277e2e628279628aeea6ae4ef4c89e3709e%22%2C%22exportedName%22%3A%22getMeetings%22%7D%2C%7B%22id%22%3A%22409b7728ea445916a9f52fd57d840ca1984f8e77c8%22%2C%22exportedName%22%3A%22getMeetingDetail%22%7D%2C%7B%22id%22%3A%22605fc81d98b048f35ab1b86225b96d7605df9c83b8%22%2C%22exportedName%22%3A%22updateActionItemStatus%22%7D%2C%7B%22id%22%3A%2260dd95034bdec28d5e0102f03c369fd17bad194ef3%22%2C%22exportedName%22%3A%22uploadMeetingAudio%22%7D%2C%7B%22id%22%3A%22708efad985b74802522e7ee58ed301aa89cb11de73%22%2C%22exportedName%22%3A%22createMeeting%22%7D%5D%5D%5D&__client_imported__=!",
           "async": false
         }
       },
       "layer": {
-        "app/dashboard/page": "rsc"
+        "app/dashboard/page": "rsc",
+        "app/meetings/new/page": "action-browser",
+        "app/meetings/[id]/page": "rsc"
       }
     },
-    "60c88d437241fe5fb5671ecaec23531d31b3570edc": {
+    "60dd95034bdec28d5e0102f03c369fd17bad194ef3": {
       "workers": {
         "app/dashboard/page": {
-          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CProjects%5C%5CAi_Meeting_Memory_Engine%5C%5Csrc%5C%5Capp%5C%5Cactions%5C%5Cmeetings.ts%22%2C%5B%7B%22id%22%3A%2240a2c414061e1492b6556e425a322ed4698a6c0b06%22%2C%22exportedName%22%3A%22getMeetingDetail%22%7D%2C%7B%22id%22%3A%2240ea435321c1527998450e4384b7182f2958c87fcb%22%2C%22exportedName%22%3A%22getMeetings%22%7D%2C%7B%22id%22%3A%22608d2b4eb1f73011c6da4f08bf90541a75464b2f45%22%2C%22exportedName%22%3A%22uploadMeetingAudio%22%7D%2C%7B%22id%22%3A%2260c88d437241fe5fb5671ecaec23531d31b3570edc%22%2C%22exportedName%22%3A%22updateActionItemStatus%22%7D%2C%7B%22id%22%3A%227062eeccd8fc263459d8a67dd70cb0e896ad37c97e%22%2C%22exportedName%22%3A%22createMeeting%22%7D%5D%5D%5D&__client_imported__=!",
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CProjects%5C%5CAi_Meeting_Memory_Engine%5C%5Csrc%5C%5Capp%5C%5Cactions%5C%5Cmeetings.ts%22%2C%5B%7B%22id%22%3A%224060ea7277e2e628279628aeea6ae4ef4c89e3709e%22%2C%22exportedName%22%3A%22getMeetings%22%7D%2C%7B%22id%22%3A%22409b7728ea445916a9f52fd57d840ca1984f8e77c8%22%2C%22exportedName%22%3A%22getMeetingDetail%22%7D%2C%7B%22id%22%3A%22605fc81d98b048f35ab1b86225b96d7605df9c83b8%22%2C%22exportedName%22%3A%22updateActionItemStatus%22%7D%2C%7B%22id%22%3A%2260dd95034bdec28d5e0102f03c369fd17bad194ef3%22%2C%22exportedName%22%3A%22uploadMeetingAudio%22%7D%2C%7B%22id%22%3A%22708efad985b74802522e7ee58ed301aa89cb11de73%22%2C%22exportedName%22%3A%22createMeeting%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/meetings/new/page": {
+          "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CProjects%5C%5CAi_Meeting_Memory_Engine%5C%5Csrc%5C%5Capp%5C%5Cactions%5C%5Cmeetings.ts%22%2C%5B%7B%22id%22%3A%224060ea7277e2e628279628aeea6ae4ef4c89e3709e%22%2C%22exportedName%22%3A%22getMeetings%22%7D%2C%7B%22id%22%3A%22409b7728ea445916a9f52fd57d840ca1984f8e77c8%22%2C%22exportedName%22%3A%22getMeetingDetail%22%7D%2C%7B%22id%22%3A%22605fc81d98b048f35ab1b86225b96d7605df9c83b8%22%2C%22exportedName%22%3A%22updateActionItemStatus%22%7D%2C%7B%22id%22%3A%2260dd95034bdec28d5e0102f03c369fd17bad194ef3%22%2C%22exportedName%22%3A%22uploadMeetingAudio%22%7D%2C%7B%22id%22%3A%22708efad985b74802522e7ee58ed301aa89cb11de73%22%2C%22exportedName%22%3A%22createMeeting%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        },
+        "app/meetings/[id]/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CProjects%5C%5CAi_Meeting_Memory_Engine%5C%5Csrc%5C%5Capp%5C%5Cactions%5C%5Cmeetings.ts%22%2C%5B%7B%22id%22%3A%224060ea7277e2e628279628aeea6ae4ef4c89e3709e%22%2C%22exportedName%22%3A%22getMeetings%22%7D%2C%7B%22id%22%3A%22409b7728ea445916a9f52fd57d840ca1984f8e77c8%22%2C%22exportedName%22%3A%22getMeetingDetail%22%7D%2C%7B%22id%22%3A%22605fc81d98b048f35ab1b86225b96d7605df9c83b8%22%2C%22exportedName%22%3A%22updateActionItemStatus%22%7D%2C%7B%22id%22%3A%2260dd95034bdec28d5e0102f03c369fd17bad194ef3%22%2C%22exportedName%22%3A%22uploadMeetingAudio%22%7D%2C%7B%22id%22%3A%22708efad985b74802522e7ee58ed301aa89cb11de73%22%2C%22exportedName%22%3A%22createMeeting%22%7D%5D%5D%5D&__client_imported__=!",
           "async": false
         }
       },
       "layer": {
-        "app/dashboard/page": "rsc"
+        "app/dashboard/page": "rsc",
+        "app/meetings/new/page": "action-browser",
+        "app/meetings/[id]/page": "rsc"
       }
     },
-    "7062eeccd8fc263459d8a67dd70cb0e896ad37c97e": {
+    "708efad985b74802522e7ee58ed301aa89cb11de73": {
       "workers": {
         "app/dashboard/page": {
-          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CProjects%5C%5CAi_Meeting_Memory_Engine%5C%5Csrc%5C%5Capp%5C%5Cactions%5C%5Cmeetings.ts%22%2C%5B%7B%22id%22%3A%2240a2c414061e1492b6556e425a322ed4698a6c0b06%22%2C%22exportedName%22%3A%22getMeetingDetail%22%7D%2C%7B%22id%22%3A%2240ea435321c1527998450e4384b7182f2958c87fcb%22%2C%22exportedName%22%3A%22getMeetings%22%7D%2C%7B%22id%22%3A%22608d2b4eb1f73011c6da4f08bf90541a75464b2f45%22%2C%22exportedName%22%3A%22uploadMeetingAudio%22%7D%2C%7B%22id%22%3A%2260c88d437241fe5fb5671ecaec23531d31b3570edc%22%2C%22exportedName%22%3A%22updateActionItemStatus%22%7D%2C%7B%22id%22%3A%227062eeccd8fc263459d8a67dd70cb0e896ad37c97e%22%2C%22exportedName%22%3A%22createMeeting%22%7D%5D%5D%5D&__client_imported__=!",
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CProjects%5C%5CAi_Meeting_Memory_Engine%5C%5Csrc%5C%5Capp%5C%5Cactions%5C%5Cmeetings.ts%22%2C%5B%7B%22id%22%3A%224060ea7277e2e628279628aeea6ae4ef4c89e3709e%22%2C%22exportedName%22%3A%22getMeetings%22%7D%2C%7B%22id%22%3A%22409b7728ea445916a9f52fd57d840ca1984f8e77c8%22%2C%22exportedName%22%3A%22getMeetingDetail%22%7D%2C%7B%22id%22%3A%22605fc81d98b048f35ab1b86225b96d7605df9c83b8%22%2C%22exportedName%22%3A%22updateActionItemStatus%22%7D%2C%7B%22id%22%3A%2260dd95034bdec28d5e0102f03c369fd17bad194ef3%22%2C%22exportedName%22%3A%22uploadMeetingAudio%22%7D%2C%7B%22id%22%3A%22708efad985b74802522e7ee58ed301aa89cb11de73%22%2C%22exportedName%22%3A%22createMeeting%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/meetings/new/page": {
+          "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CProjects%5C%5CAi_Meeting_Memory_Engine%5C%5Csrc%5C%5Capp%5C%5Cactions%5C%5Cmeetings.ts%22%2C%5B%7B%22id%22%3A%224060ea7277e2e628279628aeea6ae4ef4c89e3709e%22%2C%22exportedName%22%3A%22getMeetings%22%7D%2C%7B%22id%22%3A%22409b7728ea445916a9f52fd57d840ca1984f8e77c8%22%2C%22exportedName%22%3A%22getMeetingDetail%22%7D%2C%7B%22id%22%3A%22605fc81d98b048f35ab1b86225b96d7605df9c83b8%22%2C%22exportedName%22%3A%22updateActionItemStatus%22%7D%2C%7B%22id%22%3A%2260dd95034bdec28d5e0102f03c369fd17bad194ef3%22%2C%22exportedName%22%3A%22uploadMeetingAudio%22%7D%2C%7B%22id%22%3A%22708efad985b74802522e7ee58ed301aa89cb11de73%22%2C%22exportedName%22%3A%22createMeeting%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        },
+        "app/meetings/[id]/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CProjects%5C%5CAi_Meeting_Memory_Engine%5C%5Csrc%5C%5Capp%5C%5Cactions%5C%5Cmeetings.ts%22%2C%5B%7B%22id%22%3A%224060ea7277e2e628279628aeea6ae4ef4c89e3709e%22%2C%22exportedName%22%3A%22getMeetings%22%7D%2C%7B%22id%22%3A%22409b7728ea445916a9f52fd57d840ca1984f8e77c8%22%2C%22exportedName%22%3A%22getMeetingDetail%22%7D%2C%7B%22id%22%3A%22605fc81d98b048f35ab1b86225b96d7605df9c83b8%22%2C%22exportedName%22%3A%22updateActionItemStatus%22%7D%2C%7B%22id%22%3A%2260dd95034bdec28d5e0102f03c369fd17bad194ef3%22%2C%22exportedName%22%3A%22uploadMeetingAudio%22%7D%2C%7B%22id%22%3A%22708efad985b74802522e7ee58ed301aa89cb11de73%22%2C%22exportedName%22%3A%22createMeeting%22%7D%5D%5D%5D&__client_imported__=!",
           "async": false
         }
       },
       "layer": {
-        "app/dashboard/page": "rsc"
+        "app/dashboard/page": "rsc",
+        "app/meetings/new/page": "action-browser",
+        "app/meetings/[id]/page": "rsc"
       }
     }
   },
   "edge": {},
-  "encryptionKey": "C+ToFmR/41IJ2AJkr0eIrqqlC6YwmxNoVYFHIbR/IBg="
+  "encryptionKey": "ebDvrC3t7oDP0v2H7YMeSwgWIGf3kzNhE3x5BB1JP7c="
 }
